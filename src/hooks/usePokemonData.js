@@ -1,5 +1,13 @@
 import { useEffect, useState } from 'react'
 
+/**
+ * A custom hook to fetch a list of Pokémon data from the PokeAPI.
+ *
+ * @param {number} [limit=20] - The number of Pokémon to fetch. Defaults to 20.
+ * @returns {{pokemon: Array<Object>, loading: boolean}} An object containing the array of Pokémon data and a loading state.
+ * @property {Array<Object>} pokemon - An array of Pokémon objects, each containing detailed information about a Pokémon.
+ * @property {boolean} loading - A boolean indicating whether the data is currently being fetched. True when fetching, false otherwise.
+ */
 const usePokemonData = (limit = 20) => {
     // pokemon = variable que almacena los pokemon
     // setPokemon = es el setter (función) que modifica a pokemon
